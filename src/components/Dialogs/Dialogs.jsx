@@ -6,11 +6,11 @@ import Message from "./Message/Message";
 const Dialogs = (props) => {
 
     const handleChangeMessage = (event) => {
-        props.onChangeMessage(event.target.value);
+        props.changeMessage(event.target.value);
     };
 
     const handleAddMessage = () => {
-        props.onAddMessage();
+        props.addMessage();
     };
 
     return (

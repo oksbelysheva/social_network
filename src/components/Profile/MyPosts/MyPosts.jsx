@@ -5,11 +5,11 @@ import Post from "./Post/Post";
 const MyPosts = (props) => {
 
     const handleAddButtonClick = () => {
-        props.onAddPost();
+        props.addPost();
     };
 
     const handleChange = (event) => {
-        props.onPostChange(event.target.value);
+        props.changeNewPostText(event.target.value);
     };
 
     return (

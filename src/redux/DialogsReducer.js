@@ -39,11 +39,11 @@ export const dialogsReducer = (state = initialState, action) => {
     }
 };
 
-export const changeMessageActionCreator = (message) => ({
+export const changeMessage = (message) => ({
     type: CHANGE_NEW_MESSAGE_TEXT,
     newMessageText: message
 });
 
-export const addMessageActionCreator = () => ({type: ADD_MESSAGE});
+export const addMessage = () => ({type: ADD_MESSAGE});
 
 export default dialogsReducer;
