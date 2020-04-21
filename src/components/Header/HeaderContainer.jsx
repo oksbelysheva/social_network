@@ -6,7 +6,6 @@ import {authMe} from "../../redux/AuthReducer";
 
 class HeaderContainer extends React.Component {
     componentDidMount() {
-        debugger
         this.props.authMe();
     }
 

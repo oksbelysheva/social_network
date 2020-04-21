@@ -20,10 +20,18 @@ export const usersAPI = {
     }
 };
 
-export const auth = () => {
-    return samurai.get(`auth/me`).then(response => response.data);
+export const profileAPI = {
+    getProfile(userId) {
+        return samurai.get(`profile/${userId}`).then(response => response.data);
+    },
+    getStatus(userId) {
+        return samurai.get(`profile/status/${userId}`).then(response => response.data);
+    },
+    updateStatus(status) {
+        return samurai.put(`profile/status`, {status}).then(response => response.data);
+    },
 };
 
-export const getProfile = (userId) => {
-    return samurai.get(`profile/${userId}`).then(response => response.data);
+export const auth = () => {
+    return samurai.get(`auth/me`).then(response => response.data);
 };
